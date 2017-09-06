@@ -14,20 +14,16 @@ import javax.persistence.SqlResultSetMapping;
 import javax.persistence.SqlResultSetMappings;
 import javax.persistence.StoredProcedureParameter;
 
-/**
- *
- * @author nduyhai
- */
 @Entity
 @NamedStoredProcedureQueries({
     @NamedStoredProcedureQuery(
-           name = "findFakeCustomer"
+           name = "Customer.getCustomer"
             , procedureName = "getFakeCustomer"
             , resultSetMappings = {"customerResultMapping"}
             , parameters = {
                 @StoredProcedureParameter(name = "id", mode = ParameterMode.IN, type = Integer.class)
             }
-            
+
     )
 })
 
@@ -83,6 +79,5 @@ public class Customer implements Serializable {
         return "Customer{" + "id=" + id + ", name=" + name + ", age=" + age + '}';
     }
     
-    
-    
+
 }
