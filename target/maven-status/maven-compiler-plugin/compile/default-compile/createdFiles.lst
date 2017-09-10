@@ -1,6 +1,4 @@
-com\nduyhai\store\repository\entities\Customer.class
-com\nduyhai\store\controller\StoreController.class
-com\nduyhai\store\repository\StoreRepository.class
-com\nduyhai\store\configuration\AbstractDataSourceConfiguration.class
+com\nduyhai\store\repository\StudentRepository.class
+com\nduyhai\store\repository\entities\Student.class
 com\nduyhai\store\StoreApplication.class
-com\nduyhai\store\configuration\DataSourceConfiguration.class
+com\nduyhai\store\controller\StudentController.class
