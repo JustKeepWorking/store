@@ -12,14 +12,21 @@ import java.io.Serializable;
                         "StudentMapper"
                 },
                 parameters = {
-                        @StoredProcedureParameter(name = "id", mode = ParameterMode.IN, type = Integer.class)
-                }),
+                        @StoredProcedureParameter(name = "id", mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.REF_CURSOR, type = void.class)
+
+                }
+        ),
         @NamedStoredProcedureQuery(
                 name = "Student.callStoreGetAllStudent",
                 procedureName = "get_all_student",
                 resultClasses = {
                         Student.class ////Will try to map the returned columns to the entity properties based on their name and type
-                })
+                },
+                parameters = {
+                        @StoredProcedureParameter(mode = ParameterMode.REF_CURSOR, type = void.class)
+                }
+        )
 })
 @NamedNativeQueries({
         @NamedNativeQuery(

@@ -23,7 +23,7 @@ CREATE OR REPLACE FUNCTION get_all_student() RETURNS refcursor  AS $$
 DECLARE
   curs refcursor;
 BEGIN
-  OPEN curs FOR SELECT * FROM student;
-  return curs;
+  OPEN curs FOR SELECT id, name, age FROM student;
+  RETURN curs;
 END
 $$ LANGUAGE plpgsql;
